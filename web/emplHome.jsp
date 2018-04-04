@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>TransportYourWorld</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link href="style.css"  rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href=foot.css"  rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+   <script language="java script">
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+		interval:   4000
+	});
+
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');
+			}
+		}
+		clickEvent = false;
+	});
+});
+</script>
+  </head>
+  <body>
+<div class="container">
+  <!-- Topper w/ logo -->
+  <div class="row hidden-xs topper">
+    <div class="col-xs-3 col-sm-3">
+      <a><img am-TopLogo alt="SECUREVIEW"  src="Image/logo.png" class="img-responsive"></a>
+    </div>
+    <!--<div class="col-xs-7 col-xs-offset-1 col-sm-7 col-sm-offset-0 text-right ">
+  
+    </div>-->
+  </div> <!-- End Topper -->
+  <!-- Navigation -->
+  <div class="row">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand visible-xs-inline-block nav-logo" href="/"><img src="/images/logo-dark-inset.png" class="img-responsive" alt=""></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav js-nav-add-active-class">
+            <li><a href="loginform.html">Home</a></li>
+            <li><a href="car.jsp">Add Car</a></li>
+           <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="">Book Individual</a></li>
+                <li><a href="">Book Route</a></li>  
+              </ul>
+            </li>
+            <li><a href="calFare.jsp">Calculate fare</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Passenger<b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu">
+                 <li><a href="uadd.jsp">Add</a></li>
+                <li><a href="udelete.jsp">Delete</a></li>  
+                <li><a href="umodi.jsp">Modify</a></li>
+                <li><a href="ushow.jsp">All Passenger</a></li>
+              </ul>
+            
+            <li><a href="edit.jsp">Edit Request</a></li>
+            <li><a href="cancel.jsp">Cancel Booking</a></li>
+            <li><a href="contact.jsp">Contact Us</a></li>
+            
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-xs">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:blue;font-size: 20px;">Login <b class="caret"></b>                  </a>
+
+              <ul class="dropdown-menu" role="menu">
+                   <li><a href="loginform.html">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <img src="Image/ca.jpg" width="100%">
+           <div class="carousel-caption">
+            <h3>TransportYourWorld</h3>
+            <p></p>
+          </div>
+        </div><!-- End Item -->
+
+         <div class="item">
+          <img src="Image/13.png" width="100%">
+           <div class="carousel-caption">
+            <h3>TransportYourWorld</h3>
+            <p></p>
+          </div>
+        </div><!-- End Item -->   
+        
+         <div class="item">
+          <img src="Image/11.png" width="100%">
+           <div class="carousel-caption">
+            <h3>TransportYourWorld</h3>
+            <p></p>
+          </div>
+        </div><!-- End Item --> 
+      </div><!-- End Carousel Inner -->
+</div><!-- End Carousel -->
+
+</div>
+<hr>  
+    <br>
+    <div  class="row">
+    <p>
+       This website acts as mediator between people who want to pool car together. People from all big companies and individuals ( from all over India) are getting registered on website to find a carpool either for giving lift or for taking lift. Beauty of website lies in its security feature of Employee code verification .
+
+You can search pools across all the companies and specific to your compnay.
+
+Through extensive research into existing transport options, we identified the need to develop alternative ways of travelling, including more efficient use of the car.
+
+Today carpool has become need of the hour. This year seems to be the most happening year for carpool. carpool movement, especially in metros. Media is also playing an active role to strengthen this movement and also providing awareness to masses.
+
+We pride ourselves on our ability to design and deliver new transport solutions. Our Data Management department develops new technology and protects your data from unauthorized access. Our Support-Team answers all questions via email or telephone and regularly checks stored data in order to block unserious users from our portal.
+
+All of our services are extensively tried and tested at the piloting stage. Only by listening to what our customers want, and keeping on top of industry trends can we provide 'best practice' and 'best value' solutions. 
+We commit ourselves to the effective promotion of shared journeys, support scientific work and have above all been the first company in India to relieve the strain of commuter traffic in a proactive way.
+        
+    </p>
+    </div>
+    
+    
+     </div>
+</div><!--COntainer Closed--->
+    
+   
+ <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<div style="width:80%;margin-left: auto;margin-right: auto;">
+<!--footer start from here-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 footerleft ">
+        <div class="logofooter"> <a><img am-TopLogo alt="SECUREVIEW"  src="Image/logo.png" class="img-responsive" width="50%"></a></div>
+        <p>This website acts as mediator between people who want to pool car together. People from all big companies and individuals ( from all over India) are getting registered on website to find a carpool either for giving lift or for taking lift. Beauty of website lies in its security feature of Employee code verification .
+You can search pools across all the companies and specific to your compnay.
+Through extensive research into existing transport options, we identified the need to develop alternative ways of travelling, including more efficient use of the car.
+Today carpool has become need of the hour. This year seems to be the most happening year for carpool. carpool movement, especially in metros. Media is also playing an active role to strengthen this movement and also providing awareness to masses.
+</p>
+        <p><i class="fa fa-map-pin"></i> B-1/624, Najafgarh Road, Block B1, Janakpuri, Delhi 110058</p>
+        <p><i class="fa fa-phone"></i> Phone (India) : +91 9811926578</p>
+        <p><i class="fa fa-envelope"></i> E-mail :s199611s@gmail.com</p>
+        
+      </div>
+          
+      <div class="col-md-4 col-sm-4 paddingtop-bottom">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+          </div>
+        </div>
+          <div class="fb-page" data-href="https://www.twitter.com/twitter" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.twitter.com/twitter"><a href="https://www.twitter.com/twitter">Twitter</a></blockquote>
+          </div>
+        </div>
+         
+      </div>
+    </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2018 - All Rights with evoucher</p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+     
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+            <li><a href="galary.jsp">Gallery</a></li>
+            <li><a href="contact.jsp">Contact Us</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+</div>         
+        
+  </body>
+  
+</html>
